@@ -37,6 +37,12 @@ public class TestBurger {
     }
 
     @Test
+    public void checkIngredientsIsEmpty(){
+        Burger burger = new Burger();
+        Assert.assertTrue(burger.ingredients.isEmpty());
+    }
+
+    @Test
     public void checkAddIngredient(){
         Burger burger = new Burger();
         burger.addIngredient(chiliSauce);
