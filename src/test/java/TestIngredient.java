@@ -17,15 +17,15 @@ public class TestIngredient {
         this.price = price;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "{index}: type={0}, name={1}, price={2}")
     public static Object[] getIngredientData() {
-        return new Object[][] {
-                { IngredientType.SAUCE, "hot sauce", 100 },
-                { IngredientType.SAUCE, "sour cream", 200 },
-                { IngredientType.SAUCE, "chili sauce", 300 },
-                { IngredientType.FILLING, "cutlet", 100 },
-                { IngredientType.FILLING, "dinosaur", 200 },
-                { IngredientType.FILLING, "sausage", 300 },
+        return new Object[][]{
+                {IngredientType.SAUCE, "hot sauce", 100},
+                {IngredientType.SAUCE, "sour cream", 200},
+                {IngredientType.SAUCE, "chili sauce", 300},
+                {IngredientType.FILLING, "cutlet", 100},
+                {IngredientType.FILLING, "dinosaur", 200},
+                {IngredientType.FILLING, "sausage", 300},
         };
     }
 
@@ -37,14 +37,14 @@ public class TestIngredient {
     }
 
     @Test
-    public void checkName(){
+    public void checkName() {
         Ingredient ingredient = new Ingredient(type, name, price);
 
         Assert.assertEquals(name, ingredient.getName());
     }
 
     @Test
-    public void checkPrice(){
+    public void checkPrice() {
         Ingredient ingredient = new Ingredient(type, name, price);
 
         Assert.assertEquals(price, ingredient.getPrice(), 0);

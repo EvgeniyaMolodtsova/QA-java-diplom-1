@@ -24,33 +24,33 @@ public class TestBurger {
     Ingredient cutlet;
 
     @Test
-    public void checkSetBun(){
+    public void checkSetBun() {
         Burger burger = new Burger();
         burger.setBuns(bun);
         Assert.assertEquals(bun, burger.bun);
     }
 
     @Test
-    public void checkEmptyBun(){
+    public void checkEmptyBun() {
         Burger burger = new Burger();
         Assert.assertNull(burger.bun);
     }
 
     @Test
-    public void checkIngredientsIsEmpty(){
+    public void checkIngredientsIsEmpty() {
         Burger burger = new Burger();
         Assert.assertTrue(burger.ingredients.isEmpty());
     }
 
     @Test
-    public void checkAddIngredient(){
+    public void checkAddIngredient() {
         Burger burger = new Burger();
         burger.addIngredient(chiliSauce);
         Assert.assertTrue(burger.ingredients.contains(chiliSauce));
     }
 
     @Test
-    public void checkRemoveIngredient(){
+    public void checkRemoveIngredient() {
         Burger burger = new Burger();
         burger.addIngredient(chiliSauce);
         burger.removeIngredient(0);
@@ -58,16 +58,16 @@ public class TestBurger {
     }
 
     @Test
-    public void checkMoveIngredient(){
+    public void checkMoveIngredient() {
         Burger burger = new Burger();
         burger.addIngredient(chiliSauce);
         burger.addIngredient(cutlet);
-        burger.moveIngredient(1,0);
+        burger.moveIngredient(1, 0);
         Assert.assertEquals(cutlet, burger.ingredients.get(0));
     }
 
     @Test
-    public void checkGetPrice(){
+    public void checkGetPrice() {
         Burger burger = new Burger();
 
         burger.setBuns(bun);
@@ -82,7 +82,7 @@ public class TestBurger {
     }
 
     @Test
-    public void checkGetReceipt(){
+    public void checkGetReceipt() {
         Burger burger = new Burger();
 
         burger.setBuns(bun);
